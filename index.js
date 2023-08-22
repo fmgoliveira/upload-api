@@ -27,7 +27,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
 
 app.get('/uploads/:fileId', (req, res) => {
   const fileId = req.params.fileId;
-  const filePath = path.join(__dirname, 'uploads', `${fileId).pdf`;
+  const filePath = path.join(__dirname, 'uploads', `${fileId}.pdf`;
   res.sendFile(filePath);
 });
 

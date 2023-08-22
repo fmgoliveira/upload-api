@@ -2,7 +2,9 @@
   "name": "upload-api",
   "version": "1.0.0",
   "description": "A simple node app to receive files and store them",
-  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "repository": "https://github.com/dr-monocle/upload-api",
   "author": "dr-monocle <contact.drmonocle@gmail.com>",
   "license": "MIT",

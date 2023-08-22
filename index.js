@@ -1,8 +1,8 @@
-import express from 'express';
-import multer from 'multer';
-import path from 'path';
-import { v4 } from 'uuid';
-import { appUrl, appPort } from './config.json';
+const express = require('express');
+const multer = require('multer');
+const path = require('path');
+const { v4: uuidv4 } = require('uuid');
+const { appUrl, appPort } = require('./config.json');
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });

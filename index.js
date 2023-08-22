@@ -5,9 +5,6 @@ const { v4: uuidv4 } = require('uuid');
 const { appUrl, appPort } = require('./config.json');
 
 const app = express();
-const upload = multer({ dest: 'uploads/' });
-
-const app = express();
 const storage = multer.diskStorage({
   destination: 'uploads/',
   filename: (req, file, cb) => {

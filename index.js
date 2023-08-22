@@ -15,6 +15,8 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
+app.use(cors());
+
 app.post('/upload', upload.single('file'), (req, res) => {
   const file = req.file;
   const fileId = path.parse(file.filename).name;

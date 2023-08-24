@@ -21,13 +21,13 @@ app.use(cors());
 app.post('/upload', upload.single('file'), (req, res) => {
   const file = req.file;
   const fileId = path.parse(file.filename).name;
-  const fileUrl = `${appUrl}/uploads/${fileId}`;
+  const fileUrl = `${appUrl}/uploads/${fileId}${path.extname(file.originalname)}`;
   res.json({ url: fileUrl });
 });
 
 app.get('/uploads/:fileId', (req, res) => {
   const fileId = req.params.fileId;
-  const filePath = path.join(__dirname, 'uploads', `${fileId}.pdf`);
+  const filePath = path.join(__dirname, 'uploads', `${fileId}`);
   res.sendFile(filePath);
 });
 
